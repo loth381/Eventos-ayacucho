@@ -14,7 +14,7 @@ type FileUploaderProps = {
   setFiles: Dispatch<SetStateAction<File[]>>
 }
 
-export function FileUploader({ imageUrl, onFieldChange, setFiles }: FileUploaderProps) {
+export function FileUploader({ imageUrl, onFieldChange, setFiles }: Readonly<FileUploaderProps>) {
   const onDrop = useCallback((acceptedFiles: File[]) => {
     setFiles(acceptedFiles)
     onFieldChange(convertFileToUrl(acceptedFiles[0]))
