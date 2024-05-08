@@ -101,16 +101,13 @@ const EventForm = ({ userId, type }: EventFormProps) => {
             )}
           />
 
-          <FormField
+           <FormField
             control={form.control}
             name="categoryId"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Dropdown
-                    onChangeHandler={field.onChange}
-                    value={field.value}
-                  />
+                  <Dropdown onChangeHandler={field.onChange} value={field.value} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
